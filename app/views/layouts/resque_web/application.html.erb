@@ -54,14 +54,16 @@
   </div>
 </div>
 
-<% unless subtabs.empty? %>
-<ul class="nav subnav">
+<% if subtabs.any? %>
+<div class="subnav">
   <div class="container">
-    <% subtabs.each do |tab_name| %>
-      <%= subtab tab_name %>
-    <% end %>
+    <ul class="nav">
+      <% subtabs.each do |tab_name| %>
+        <%= subtab tab_name %>
+      <% end %>
+    </ul>
   </div>
-</ul>
+</div>
 <% end %>
 
 <div class="container" id="main">
